@@ -10,7 +10,8 @@ Vcs-Browser: https://github.com/renard/ccl-debian
 
 Package: ccl
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, common-lisp-controller
+Provides: lisp-compiler
 Description: Clozure Common Lisp compiler and development system 
  Clozure CL (often called CCL for short) is a free Common Lisp
  implementation with a long history. Some distinguishing features
