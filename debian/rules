@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+%:
+	dh $*
+
+override_dh_auto_configure:
+	mkdir build
+	tar -C build --strip-components=1 -xf ccl-*.tar.gz 
+	dh_auto_configure
+
+override_dh_auto_build:
+	cd build && ./lx86cl64 -l ../build-ccl.lisp
+	mv build/ccl-deb lx86cl64.image
+	cd build/doc/src && make -f Makefile.debian  CCL=../../lx86cl64 -I ../../../lx86cl64.image
+
+override_dh_clean:
+	rm -rf build lx86cl*.image
+	dh_clean

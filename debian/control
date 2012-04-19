@@ -1,0 +1,19 @@
+Source: ccl
+Section: lisp
+Priority: extra
+Maintainer: Sébastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
+Build-Depends: debhelper (>= 7.0.50~), docbook-xsl, docbook-dsssl
+Standards-Version: 3.8.4
+Homepage: http://ccl.clozure.com/ 
+#Vcs-Git: git://git.debian.org/collab-maint/ccl.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/ccl.git;a=summary
+
+Package: ccl
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Clozure Common Lisp compiler and development system 
+ Clozure CL (often called CCL for short) is a free Common Lisp
+ implementation with a long history. Some distinguishing features
+ of the implementation include fast compilation speed, native threads,
+ a precise, generational, compacting garbage collector, and a
+ convenient foreign-function interface.

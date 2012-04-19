@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export CCL_DEFAULT_DIRECTORY=/usr/share/ccl
+OPENMCL_KERNEL=lx86cl64
+
+exec ${CCL_DEFAULT_DIRECTORY}/${OPENMCL_KERNEL} "$@"

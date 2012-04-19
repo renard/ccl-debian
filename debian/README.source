@@ -1,0 +1,9 @@
+ccl for Debian
+--------------
+
+Before building the CCL package you need to get upstream tarball from
+http://ccl.clozure.com/download.html
+
+For Debian system you should take Linux X86 version
+
+ftp://ftp.clozure.com/pub/release/1.8/ccl-1.8-linuxx86.tar.gz
