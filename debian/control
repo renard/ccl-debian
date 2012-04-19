@@ -5,8 +5,8 @@ Maintainer: Sébastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
 Build-Depends: debhelper (>= 7.0.50~), docbook-xsl, docbook-dsssl
 Standards-Version: 3.8.4
 Homepage: http://ccl.clozure.com/ 
-#Vcs-Git: git://git.debian.org/collab-maint/ccl.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/ccl.git;a=summary
+Vcs-Git: git://github.com/renard/ccl-debian.git
+Vcs-Browser: https://github.com/renard/ccl-debian
 
 Package: ccl
 Architecture: any
