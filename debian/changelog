@@ -1,3 +1,9 @@
+ccl (1.8-2) unstable; urgency=low
+
+  * Fix build issues.
+
+ -- Sébastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>  Thu, 10 May 2012 15:32:10 +0000
+
 ccl (1.8-1) unstable; urgency=low
 
   * Initial release

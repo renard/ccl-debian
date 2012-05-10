@@ -4,6 +4,12 @@
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
+ifeq (${DEB_HOST_ARCH_BITS},64)
+	CCL_ARCH_SUFFIX=64
+else
+	CCL_ARCH_SUFFIX=
+endif
+
 %:
 	dh $*
 
@@ -13,9 +19,11 @@ override_dh_auto_configure:
 	dh_auto_configure
 
 override_dh_auto_build:
-	cd build && ./lx86cl64 -l ../build-ccl.lisp
-	mv build/ccl-deb lx86cl64.image
-	cd build/doc/src && make -f Makefile.debian  CCL=../../lx86cl64 -I ../../../lx86cl64.image
+	cd build && ./lx86cl${CCL_ARCH_SUFFIX} -l ../build-ccl.lisp
+	mv build/ccl-deb${CCL_ARCH_SUFFIX} lx86cl${CCL_ARCH_SUFFIX}.image
+	mv build/lx86cl${CCL_ARCH_SUFFIX} lx86cl${CCL_ARCH_SUFFIX}
+	cd build/doc/src && make -f Makefile.debian CCL=../../lx86cl${CCL_ARCH_SUFFIX} \
+		-I ../../../lx86cl${CCL_ARCH_SUFFIX}.image
 
 override_dh_clean:
 	rm -rf build lx86cl*.image

@@ -1,3 +1,2 @@
-build/lx86cl64 usr/share/ccl
-lx86cl64.image usr/share/ccl
+lx86cl* usr/share/ccl
 ccl usr/bin
