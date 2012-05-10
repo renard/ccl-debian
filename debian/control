@@ -2,7 +2,8 @@ Source: ccl
 Section: lisp
 Priority: extra
 Maintainer: Sébastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
-Build-Depends: debhelper (>= 7.0.50~), docbook-xsl, docbook-dsssl, m4
+Build-Depends: debhelper (>= 7.0.50~), docbook-xsl, docbook-dsssl, m4,
+ common-lisp-controller
 Standards-Version: 3.8.4
 Homepage: http://ccl.clozure.com/ 
 Vcs-Git: git://github.com/renard/ccl-debian.git
